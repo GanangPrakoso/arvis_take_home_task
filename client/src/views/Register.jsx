@@ -18,7 +18,6 @@ export default function Register() {
       .createUserWithEmailAndPassword(email, password)
       .then((res) => {
         if (res.user) {
-          console.log(res.user);
           Swal.fire("Yeay!", "Registered Succesfully", "success");
           history.push("/signin");
         }
@@ -30,6 +29,7 @@ export default function Register() {
             title: "Oops...",
             text: `You're already registered`,
           });
+        else console.log(e);
       });
   };
 

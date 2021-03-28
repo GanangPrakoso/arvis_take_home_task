@@ -24,12 +24,13 @@ export default function SignIn() {
       .signInWithEmailAndPassword(email, password)
       .then((res) => {
         if (res.user) {
-          console.log(res.user);
-          console.log(res.user.uid);
-          localStorage.setItem("user", {
-            email: res.user.email,
-            uid: res.user.uid,
-          });
+          localStorage.setItem(
+            "user",
+            JSON.stringify({
+              email: res.user.email,
+              uid: res.user.uid,
+            })
+          );
           Swal.fire("Welcome back!", "Logged in successfully", "success");
           history.push("/");
         }
@@ -41,6 +42,31 @@ export default function SignIn() {
             title: "Oops...",
             text: `User not found`,
           });
+        else console.log(e);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    let provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        // var credential = result.credential;
+        // var token = credential.accessToken;
+        var user = result.user;
+        localStorage.setItem(
+          "user",
+          JSON.stringify({
+            email: user.email,
+            uid: user.uid,
+          })
+        );
+        Swal.fire("Welcome back!", "Logged in successfully", "success");
+        history.push("/");
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -48,7 +74,10 @@ export default function SignIn() {
     <>
       <div className="wrapper fadeInDown" style={{ height: "80vh" }}>
         <div id="formContent">
-          <form style={{ paddingTop: 30 }} onSubmit={(e) => handleLogin(e)}>
+          <form
+            style={{ paddingTop: 30, height: "initial" }}
+            onSubmit={(e) => handleLogin(e)}
+          >
             <input
               type="email"
               id="login"
@@ -67,6 +96,15 @@ export default function SignIn() {
             />
             <input type="submit" className="fadeIn fourth" value="Log In" />
           </form>
+          <div id="formFooter">
+            <a
+              className="underlineHover login-link"
+              style={{ cursor: "pointer" }}
+              onClick={handleGoogleSignIn}
+            >
+              or login using your <i class="fab fa-google"></i> account
+            </a>
+          </div>
           <div id="formFooter">
             <a className="underlineHover login-link" href="/register">
               Create an account

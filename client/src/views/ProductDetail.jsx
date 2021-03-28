@@ -34,6 +34,11 @@ export default function ProductDetail() {
     if (quantity > 0) setQuantity(quantity - 1);
   };
 
+  const handleBuy = (e) => {
+    e.preventDefault();
+    // work here next
+  };
+
   return (
     <>
       <Navbar />
@@ -60,6 +65,7 @@ export default function ProductDetail() {
                     alignItems: "center",
                     justifyContent: "flex-start",
                   }}
+                  onSubmit={handleBuy}
                 >
                   <div className="qty mt-3">
                     <span

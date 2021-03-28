@@ -29,7 +29,6 @@ export default function Cart() {
         </p>
 
         <div style={{ display: "flex", justifyContent: "space-around" }}>
-          {/* <CartCard v-for="product in products" :key='product.id' :product='product'/> */}
           <CartItem />
           <CartItem />
           <CartItem />

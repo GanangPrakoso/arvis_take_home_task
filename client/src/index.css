@@ -769,3 +769,10 @@ input[type="password"]:placeholder {
 #icon {
   width: 60%;
 }
+
+.google-button-container {
+  margin-top: -25px;
+  height: 30px;
+  width: 50px;
+  background-color: blue;
+}
