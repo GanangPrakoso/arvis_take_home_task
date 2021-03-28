@@ -1,15 +1,15 @@
-import { SET_LOGIN, SET_USER } from "./actionTypes";
+import { SET_CART, DELETE_ITEM_CART, SET_QUANTITY } from "./actionTypes";
 
-export function setUser(value) {
+export function setCart(value) {
   return {
-    type: SET_USER,
+    type: SET_CART,
     payload: value,
   };
 }
 
-export function setLogin(value) {
+export function deleteItem(value) {
   return {
-    type: SET_LOGIN,
+    type: DELETE_ITEM_CART,
     payload: value,
   };
 }

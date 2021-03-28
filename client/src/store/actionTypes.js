@@ -1,2 +1,2 @@
-export const SET_USER = "SET_USER";
-export const SET_LOGIN = "SET_LOGIN";
+export const SET_CART = "SET_CART";
+export const DELETE_ITEM_CART = "DELETE_ITEM_CART";

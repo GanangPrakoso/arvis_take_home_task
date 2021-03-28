@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useDispatch } from "react-redux";
+import { setCart } from "../store/actionCreator";
 
 // components
 import Navbar from "../components/Navbar";
 
 export default function ProductDetail() {
+  const dispatch = useDispatch();
   const history = useHistory();
 
   const { id } = useParams();
@@ -36,7 +39,12 @@ export default function ProductDetail() {
 
   const handleBuy = (e) => {
     e.preventDefault();
-    // work here next
+    let newCart = {
+      ...product,
+      quantity,
+    };
+    dispatch(setCart(newCart));
+    setQuantity(0);
   };
 
   return (
@@ -58,6 +66,7 @@ export default function ProductDetail() {
               >
                 <h1>{product.productName}</h1>
                 <p style={{ textAlign: "left" }}>{product.description}</p>
+                <span>stock: {product.stock}</span>
                 <h3>${product.price},00</h3>
                 <form
                   style={{
@@ -81,6 +90,7 @@ export default function ProductDetail() {
                       min="1"
                       max={product.stock}
                       value={quantity}
+                      onChange={(e) => setQuantity(e.target.value)}
                     />
                     <span
                       className="plus bg-secondary"

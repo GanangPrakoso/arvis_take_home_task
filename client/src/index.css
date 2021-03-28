@@ -776,3 +776,11 @@ input[type="password"]:placeholder {
   width: 50px;
   background-color: blue;
 }
+
+.navbar-item-desktop a {
+  cursor: pointer;
+}
+
+.navbar-link {
+  color: #54301a;
+}

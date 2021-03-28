@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // assets
 import logo from "../assets/logo.png";
 
 function Navbar() {
   const history = useHistory();
+
+  const cart = useSelector((state) => state.cart);
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -35,13 +38,20 @@ function Navbar() {
       </div>
       <div className="navbar-item-container">
         <div className="navbar-item-desktop">
-          <a href="/">HOME</a>
-          <a href="/store">STORE</a>
-          <a href="/cart">MY CART</a>
-          <a href="#footer">ABOUT US</a>
+          <a className="navbar-link" onClick={() => history.push("/")}>
+            HOME
+          </a>
+          <a className="navbar-link" onClick={() => history.push("/store")}>
+            STORE
+          </a>
+          <a className="navbar-link" onClick={() => history.push("/cart")}>
+            MY CART
+          </a>
         </div>
         <i className="fas fa-shopping-cart" style={{ marginRight: "5px" }}></i>
-        <span style={{ fontWeight: "bold", color: "#54301a" }}>0</span>
+        <span style={{ fontWeight: "bold", color: "#54301a" }}>
+          {cart.length}
+        </span>
         <div className="navbar-item-desktop">
           <span className="login-register-button" onClick={handleSignOut}>
             LOGOUT

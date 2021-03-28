@@ -22,7 +22,7 @@ export default function Store() {
     }
 
     axios
-      .get("http://localhost:3001/productList/")
+      .get("http://localhost:3001/productList")
       .then(({ data }) => {
         setProducts(data);
       })
