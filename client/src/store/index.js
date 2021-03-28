@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import thunkMiddleware from "redux-thunk";
-// import { persistStore, persistReducer } from "redux-persist";
 import reducer from "./reducers/reducer";
+// import { persistStore, persistReducer } from "redux-persist";
 // import storage from "redux-persist/lib/storage";
 // import hardSet from "redux-persist/lib/stateReconciler/hardSet";
 

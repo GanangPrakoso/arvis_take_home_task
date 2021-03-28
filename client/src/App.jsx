@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
-// import { PersistGate } from "redux-persist/integration/react";
 
 // pages
 import LandingPage from "./views/LandingPage";
@@ -23,8 +22,6 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        {/* <PersistGate loading={null} persistor={store.persistor}> */}
-        {/* router */}
         <Router>
           <Switch>
             <Route exact path="/">
@@ -46,10 +43,8 @@ function App() {
               <Register />
             </Route>
           </Switch>
-          {/* router */}
           <Footer />
         </Router>
-        {/* </PersistGate> */}
       </Provider>
     </div>
   );
