@@ -1,0 +1,86 @@
+{
+  "productList": [
+    {
+      "id": 1,
+      "productName": "ARVIS™ SERUM",
+      "price": 150,
+      "imageSrc": "/assets/product.png",
+      "description": "Retinol source from nature, to work for wrinkle reduction, younger look and feel and brighter skin surface.",
+      "stock": 5
+    },
+    {
+      "id": 2,
+      "productName": "ARVIS™ EYE SERUM",
+      "price": 80,
+      "imageSrc": "/assets/product_1.png",
+      "description": "Safe and efficient Retinol anti-wrinkle serum targets wrinkle reduction and visibly improves skin's radiance and luminosity.",
+      "stock": 8
+    },
+    {
+      "id": 3,
+      "productName": "ARVIS™ SERUM PLUS",
+      "price": 120,
+      "imageSrc": "/assets/product_2.png",
+      "description": "Retinol source from nature, to work for wrinkle reduction, younger look and feel and brighter skin surface.",
+      "stock": 4
+    },
+    {
+      "id": 4,
+      "productName": "ARVIS™ SPECIAL",
+      "price": 70,
+      "imageSrc": "/assets/product_3.png",
+      "description": "Safe and efficient Retinol anti-wrinkle serum targets wrinkle reduction and visibly improves skin's radiance and luminosity.",
+      "stock": 4
+    },
+    {
+      "id": 5,
+      "productName": "MEN ARVIS™ SERUM",
+      "price": 190,
+      "imageSrc": "/assets/product_4.png",
+      "description": "Retinol source from nature, to work for wrinkle reduction, younger look and feel and brighter skin surface.",
+      "stock": 3
+    },
+    {
+      "id": 6,
+      "productName": "MEN ARVIS™ EYE SERUM",
+      "price": 500,
+      "imageSrc": "/assets/product_5.png",
+      "description": "Safe and efficient Retinol anti-wrinkle serum targets wrinkle reduction and visibly improves skin's radiance and luminosity.",
+      "stock": 8
+    },
+    {
+      "id": 7,
+      "productName": "ARVIS™ SERUM EXCLUSIVE",
+      "price": 60,
+      "imageSrc": "/assets/product_6.png",
+      "description": "Retinol source from nature, to work for wrinkle reduction, younger look and feel and brighter skin surface.",
+      "stock": 5
+    },
+    {
+      "id": 8,
+      "productName": "ARVIS™ FOAM",
+      "price": 100,
+      "imageSrc": "/assets/product_7.png",
+      "description": "Safe and efficient Retinol anti-wrinkle serum targets wrinkle reduction and visibly improves skin's radiance and luminosity.",
+      "stock": 6
+    }
+  ],
+  "instagramPic": [
+    {
+      "id": 1,
+      "src": "/assets/instagram_pic.jpg"
+    },
+    {
+      "id": 2,
+      "src": "/assets/instagram_pic_1.jpg"
+    },
+    {
+      "id": 3,
+      "src": "/assets/instagram_pic_2.jpg"
+    },
+    {
+      "id": 4,
+      "src": "/assets/instagram_pic_3.jpg"
+    }
+  ]
+}
